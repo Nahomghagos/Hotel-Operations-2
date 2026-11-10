@@ -1,10 +1,14 @@
-public class HotelOperations { package com.pluralsight;
+import com.pluralsight.Employee;
+import com.pluralsight.Reservation;
+import com.pluralsight.Room;
+
+public class HotelOperations {
 
     /**
      * Main (Workbook 4a, Section 2-1 Creating Classes, Exercise 1)
      *
      * The exercise says to use main() to create objects and test the logic
-     * in the classes: one Employee, one Reservation, one Room, and print
+     * in the classes: one Employee, one com.pluralsight.Reservation, one Room, and print
      * every getter so the derived values can be checked by hand.
      *
      * John Doe: 45 hours at 25.00 -> 40 regular + 5 overtime
@@ -26,13 +30,13 @@ public class HotelOperations { package com.pluralsight;
             System.out.println("Employee Overtime Hours: " + employee.getOvertimeHours());
             System.out.println("=======================================================================");
 
-            // Test Reservation class
+            // Test com.pluralsight.Reservation class
             Reservation reservation = new Reservation("king", 3, true);
             System.out.println("Room Type: " + reservation.getRoomType());
             System.out.println("Price per Night: " + reservation.getPrice());
             System.out.println("Number of Nights: " + reservation.getNumberOfNights());
             System.out.println("Is Weekend: " + reservation.isWeekend());
-            System.out.println("Reservation Total: " + reservation.getReservationTotal());
+            System.out.println("com.pluralsight.Reservation Total: " + reservation.getReservationTotal());
             System.out.println("=======================================================================");
 
             // Test Room class
@@ -42,6 +46,8 @@ public class HotelOperations { package com.pluralsight;
             System.out.println("Is Occupied: " + room.isOccupied());
             System.out.println("Is Dirty: " + room.isDirty());
             System.out.println("Is Available: " + room.isAvailable());
+            System.out.println("is checked in " + room.isCheckedIn());
+            System.out.println("is checked out " + room.isCheckedOUt());
         }
     }
 }
